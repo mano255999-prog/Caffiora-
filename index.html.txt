@@ -1,0 +1,1053 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CAFFIORA | Taste the Extraordinary</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root {
+    --green: #183d30;
+    --dark: #10291f;
+    --cream: #f7f2e8;
+    --gold: #c69b5c;
+    --brown: #70452f;
+    --white: #fff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: var(--cream);
+    color: #26352c;
+    overflow-x: hidden;
+}
+
+button, a { font-family: inherit; }
+a { text-decoration: none; color: inherit; }
+
+.topbar {
+    background: var(--dark);
+    color: white;
+    text-align: center;
+    padding: 10px;
+    font-size: 12px;
+    letter-spacing: 1.5px;
+}
+
+.topbar span { color: #e6bd7e; font-weight: 600; }
+
+header {
+    height: 85px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 7%;
+    background: var(--cream);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 3px 15px #0000000b;
+}
+
+.logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--green);
+    letter-spacing: 2px;
+}
+
+.logo span { color: var(--gold); }
+
+nav {
+    display: flex;
+    gap: 35px;
+    align-items: center;
+}
+
+nav a {
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    transition: .3s;
+}
+
+nav a:hover { color: var(--gold); }
+
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.cart {
+    border: none;
+    background: var(--green);
+    color: white;
+    padding: 12px 20px;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+.menu-btn {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 26px;
+    cursor: pointer;
+}
+
+/* HERO */
+
+.hero {
+    min-height: 620px;
+    display: flex;
+    align-items: center;
+    padding: 80px 9%;
+    position: relative;
+    background:
+    linear-gradient(90deg, rgba(10,25,18,.94) 0%, rgba(10,25,18,.78) 45%, rgba(10,25,18,.12) 100%),
+    url('https://images.unsplash.com/photo-1442512595331-e89e73853f31?auto=format&fit=crop&w=2000&q=90') center/cover;
+}
+
+.hero-content {
+    color: white;
+    max-width: 590px;
+    animation: slideUp 1s ease;
+}
+
+.eyebrow {
+    color: var(--gold);
+    letter-spacing: 4px;
+    font-size: 12px;
+    font-weight: 600;
+    margin-bottom: 22px;
+}
+
+.hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(48px, 6vw, 76px);
+    line-height: 1.12;
+    font-weight: 500;
+    margin-bottom: 22px;
+}
+
+.hero h1 span { color: #d8b77f; }
+
+.hero p {
+    font-size: 14px;
+    line-height: 2;
+    color: #e1e1dc;
+    max-width: 450px;
+    margin-bottom: 35px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 15px 30px;
+    background: var(--gold);
+    color: #17281f;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    border: none;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.btn:hover {
+    background: white;
+    transform: translateY(-4px);
+}
+
+.btn-outline {
+    background: transparent;
+    color: white;
+    border: 1px solid #ffffff90;
+    margin-left: 12px;
+}
+
+.btn-outline:hover { color: var(--green); }
+
+/* OPENING OFFER */
+
+.offer {
+    background: var(--green);
+    color: white;
+    padding: 65px 8%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.offer-content { max-width: 620px; }
+
+.offer small {
+    color: var(--gold);
+    letter-spacing: 3px;
+}
+
+.offer h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 42px;
+    margin: 12px 0;
+}
+
+.offer h2 span { color: var(--gold); }
+
+.offer p {
+    color: #d0d9d2;
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+.offer-code {
+    border: 1px dashed var(--gold);
+    padding: 18px 35px;
+    text-align: center;
+}
+
+.offer-code small {
+    display: block;
+    margin-bottom: 8px;
+}
+
+.offer-code h3 {
+    color: var(--gold);
+    letter-spacing: 3px;
+    font-size: 26px;
+}
+
+.offer-code p {
+    font-size: 10px;
+    margin-top: 7px;
+}
+
+/* SECTION GENERAL */
+
+section { padding: 90px 8%; }
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.section-heading small {
+    color: var(--gold);
+    letter-spacing: 4px;
+    font-weight: 600;
+}
+
+.section-heading h2 {
+    font-family: 'Playfair Display', serif;
+    color: var(--green);
+    font-size: 43px;
+    margin: 12px 0;
+}
+
+.section-heading p {
+    color: #777;
+    font-size: 13px;
+}
+
+/* PRODUCTS */
+
+.products {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+}
+
+.product-card {
+    background: white;
+    overflow: hidden;
+    transition: .4s;
+    position: relative;
+}
+
+.product-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px #00000015;
+}
+
+.product-card img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    transition: .5s;
+}
+
+.product-card:hover img { transform: scale(1.05); }
+
+.product-img { overflow: hidden; position: relative; }
+
+.product-tag {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background: var(--gold);
+    color: white;
+    padding: 7px 13px;
+    font-size: 10px;
+    z-index: 1;
+}
+
+.product-info { padding: 23px; }
+
+.product-info h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 23px;
+    color: var(--green);
+}
+
+.product-info p {
+    font-size: 12px;
+    color: #888;
+    margin: 8px 0 18px;
+}
+
+.product-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.price {
+    color: var(--brown);
+    font-size: 19px;
+    font-weight: 600;
+}
+
+.add-btn {
+    border: none;
+    background: var(--green);
+    color: white;
+    padding: 11px 17px;
+    cursor: pointer;
+    font-size: 11px;
+    transition: .3s;
+}
+
+.add-btn:hover { background: var(--gold); color: #222; }
+
+/* EXPERIENCE */
+
+.experience {
+    background: #eee6d7;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 65px;
+}
+
+.experience img {
+    width: 100%;
+    height: 470px;
+    object-fit: cover;
+}
+
+.experience-content small {
+    color: var(--gold);
+    letter-spacing: 3px;
+}
+
+.experience-content h2 {
+    font-family: 'Playfair Display', serif;
+    color: var(--green);
+    font-size: 47px;
+    line-height: 1.2;
+    margin: 18px 0;
+}
+
+.experience-content p {
+    font-size: 13px;
+    color: #777;
+    line-height: 2;
+    margin-bottom: 25px;
+}
+
+/* SPECIAL DEAL */
+
+.deal {
+    background:
+    linear-gradient(#10291fd9,#10291fd9),
+    url('https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=1800&q=85') center/cover;
+    text-align: center;
+    color: white;
+}
+
+.deal small {
+    color: var(--gold);
+    letter-spacing: 4px;
+}
+
+.deal h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 49px;
+    margin: 15px 0;
+}
+
+.deal p {
+    color: #ddd;
+    font-size: 14px;
+    margin-bottom: 30px;
+}
+
+/* BENEFITS */
+
+.benefits {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    text-align: center;
+}
+
+.benefit { padding: 20px 10px; }
+
+.benefit .symbol {
+    font-size: 36px;
+    margin-bottom: 18px;
+}
+
+.benefit h3 {
+    font-family: 'Playfair Display', serif;
+    color: var(--green);
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.benefit p {
+    color: #888;
+    font-size: 12px;
+    line-height: 1.8;
+}
+
+/* TESTIMONIAL */
+
+.testimonial {
+    background: #eee6d7;
+    text-align: center;
+}
+
+.testimonial blockquote {
+    max-width: 750px;
+    margin: auto;
+    font-family: 'Playfair Display', serif;
+    font-size: 30px;
+    line-height: 1.6;
+    color: var(--green);
+}
+
+.stars {
+    color: var(--gold);
+    font-size: 22px;
+    margin: 20px 0;
+}
+
+/* NEWSLETTER */
+
+.newsletter {
+    background: var(--green);
+    color: white;
+    text-align: center;
+}
+
+.newsletter h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 40px;
+    margin-bottom: 12px;
+}
+
+.newsletter p {
+    font-size: 13px;
+    color: #d5ddd7;
+    margin-bottom: 25px;
+}
+
+.newsletter form {
+    display: flex;
+    max-width: 450px;
+    margin: auto;
+}
+
+.newsletter input {
+    flex: 1;
+    min-width: 0;
+    padding: 15px;
+    border: none;
+    outline: none;
+}
+
+.newsletter button {
+    border: none;
+    background: var(--gold);
+    padding: 0 22px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+/* FOOTER */
+
+footer {
+    background: #0b2018;
+    color: white;
+    padding: 60px 8% 20px;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 45px;
+    margin-bottom: 45px;
+}
+
+.footer-brand h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 35px;
+    color: var(--gold);
+    margin-bottom: 15px;
+}
+
+.footer-brand p {
+    font-size: 12px;
+    color: #b7c1ba;
+    line-height: 2;
+    max-width: 350px;
+}
+
+.footer-links h3 {
+    margin-bottom: 18px;
+    font-size: 14px;
+}
+
+.footer-links a {
+    display: block;
+    font-size: 12px;
+    color: #b7c1ba;
+    margin: 12px 0;
+}
+
+.footer-links a:hover { color: var(--gold); }
+
+.copyright {
+    border-top: 1px solid #ffffff20;
+    text-align: center;
+    padding-top: 22px;
+    color: #87948b;
+    font-size: 11px;
+}
+
+/* CART MESSAGE */
+
+.toast {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    background: var(--green);
+    color: white;
+    padding: 16px 25px;
+    font-size: 13px;
+    z-index: 200;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: .3s;
+    pointer-events: none;
+}
+
+.toast.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: .8s;
+}
+
+.reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@keyframes slideUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* RESPONSIVE */
+
+@media(max-width: 850px) {
+    header { padding: 0 5%; }
+
+    nav {
+        display: none;
+        position: absolute;
+        top: 85px;
+        left: 0;
+        width: 100%;
+        background: var(--cream);
+        flex-direction: column;
+        padding: 25px;
+        gap: 25px;
+        box-shadow: 0 10px 15px #00000010;
+    }
+
+    nav.active { display: flex; }
+
+    .menu-btn { display: block; }
+
+    .products { grid-template-columns: repeat(2, 1fr); }
+
+    .experience { grid-template-columns: 1fr; }
+
+    .benefits { grid-template-columns: repeat(2, 1fr); }
+
+    .footer-grid { grid-template-columns: 1fr 1fr; }
+}
+
+@media(max-width: 550px) {
+    .hero {
+        min-height: 570px;
+        padding: 60px 7%;
+        background-position: 60% center;
+    }
+
+    .hero h1 { font-size: 49px; }
+
+    .hero .btn { margin-bottom: 12px; }
+
+    .offer { padding: 50px 7%; }
+
+    .offer h2 { font-size: 34px; }
+
+    section { padding: 65px 6%; }
+
+    .section-heading h2 { font-size: 34px; }
+
+    .products { grid-template-columns: 1fr; }
+
+    .product-card img { height: 280px; }
+
+    .experience-content h2 { font-size: 37px; }
+
+    .deal h2 { font-size: 36px; }
+
+    .testimonial blockquote { font-size: 23px; }
+
+    .newsletter h2 { font-size: 32px; }
+
+    .footer-grid { grid-template-columns: 1fr; gap: 25px; }
+
+    .logo { font-size: 26px; }
+
+    .nav-right { gap: 10px; }
+}
+</style>
+</head>
+
+<body>
+
+<div class="topbar">
+    GRAND OPENING SPECIAL — <span>20% OFF YOUR FIRST ORDER!</span>
+</div>
+
+<header>
+    <a href="#" class="logo">CAFFI<span>ORA.</span></a>
+
+    <nav id="navigation">
+        <a href="#home">HOME</a>
+        <a href="#menu">OUR MENU</a>
+        <a href="#about">OUR STORY</a>
+        <a href="#offers">SPECIAL OFFERS</a>
+        <a href="#contact">CONTACT</a>
+    </nav>
+
+    <div class="nav-right">
+        <button class="cart" onclick="showCart()">
+            BAG (<span id="cart-count">0</span>)
+        </button>
+        <button class="menu-btn" onclick="toggleMenu()">☰</button>
+    </div>
+</header>
+
+<!-- HERO -->
+
+<section class="hero" id="home">
+    <div class="hero-content">
+        <div class="eyebrow">WELCOME TO CAFFIORA</div>
+
+        <h1>
+            Every Cup<br>
+            Tells a <span>Story.</span>
+        </h1>
+
+        <p>
+            Discover the perfect blend of rich aroma, exceptional
+            flavour and unforgettable moments. Your coffee journey
+            starts here.
+        </p>
+
+        <a href="#menu" class="btn">EXPLORE OUR MENU →</a>
+        <a href="#about" class="btn btn-outline">OUR STORY</a>
+    </div>
+</section>
+
+<!-- OPENING OFFER -->
+
+<div class="offer" id="offers">
+    <div class="offer-content">
+        <small>CELEBRATE OUR GRAND OPENING</small>
+        <h2>Something Special.<br><span>Just for You.</span></h2>
+        <p>
+            We are celebrating our opening with exclusive coffee deals.
+            Enjoy 20% OFF your first order and experience the magic
+            of CAFFIORA.
+        </p>
+    </div>
+
+    <div class="offer-code">
+        <small>USE YOUR SPECIAL CODE</small>
+        <h3>WELCOME20</h3>
+        <p>GET 20% OFF YOUR FIRST ORDER</p>
+    </div>
+</div>
+
+<!-- MENU -->
+
+<section id="menu">
+    <div class="section-heading reveal">
+        <small>HANDCRAFTED WITH LOVE</small>
+        <h2>Our Signature Collection</h2>
+        <p>Find your perfect cup from our favourite creations.</p>
+    </div>
+
+    <div class="products">
+
+        <div class="product-card reveal">
+            <div class="product-img">
+                <span class="product-tag">BEST SELLER</span>
+                <img src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?auto=format&fit=crop&w=800&q=85" alt="Iced latte">
+            </div>
+            <div class="product-info">
+                <h3>Iced Latte</h3>
+                <p>Espresso, chilled milk and silky smooth flavour.</p>
+                <div class="product-bottom">
+                    <span class="price">Rs. 450</span>
+                    <button class="add-btn" onclick="addCart('Iced Latte',450)">ADD +</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="product-card reveal">
+            <div class="product-img">
+                <span class="product-tag">FAVOURITE</span>
+                <img src="https://images.unsplash.com/photo-1510707577719-ae7c14805e3a?auto=format&fit=crop&w=800&q=85" alt="Cappuccino">
+            </div>
+            <div class="product-info">
+                <h3>Cappuccino</h3>
+                <p>Perfect espresso with creamy, velvety foam.</p>
+                <div class="product-bottom">
+                    <span class="price">Rs. 400</span>
+                    <button class="add-btn" onclick="addCart('Cappuccino',400)">ADD +</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="product-card reveal">
+            <div class="product-img">
+                <span class="product-tag">PREMIUM</span>
+                <img src="https://images.unsplash.com/photo-1461988625982-7e46a099bf4f?auto=format&fit=crop&w=800&q=85" alt="Espresso">
+            </div>
+            <div class="product-info">
+                <h3>Classic Espresso</h3>
+                <p>Bold, rich and beautifully balanced coffee.</p>
+                <div class="product-bottom">
+                    <span class="price">Rs. 300</span>
+                    <button class="add-btn" onclick="addCart('Classic Espresso',300)">ADD +</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="product-card reveal">
+            <div class="product-img">
+                <img src="https://images.unsplash.com/photo-1570968915860-54d5c301fa9f?auto=format&fit=crop&w=800&q=85" alt="Caramel coffee">
+            </div>
+            <div class="product-info">
+                <h3>Caramel Macchiato</h3>
+                <p>A delicious combination of coffee and caramel.</p>
+                <div class="product-bottom">
+                    <span class="price">Rs. 500</span>
+                    <button class="add-btn" onclick="addCart('Caramel Macchiato',500)">ADD +</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="product-card reveal">
+            <div class="product-img">
+                <span class="product-tag">NEW</span>
+                <img src="https://images.unsplash.com/photo-1517701604599-bb29b565090c?auto=format&fit=crop&w=800&q=85" alt="Mocha coffee">
+            </div>
+            <div class="product-info">
+                <h3>Chocolate Mocha</h3>
+                <p>Rich chocolate meets our signature espresso.</p>
+                <div class="product-bottom">
+                    <span class="price">Rs. 480</span>
+                    <button class="add-btn" onclick="addCart('Chocolate Mocha',480)">ADD +</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="product-card reveal">
+            <div class="product-img">
+                <img src="https://images.unsplash.com/photo-1511920170033-f8396924c348?auto=format&fit=crop&w=800&q=85" alt="Cold coffee">
+            </div>
+            <div class="product-info">
+                <h3>Cold Brew</h3>
+                <p>Slow brewed, refreshing and naturally smooth.</p>
+                <div class="product-bottom">
+                    <span class="price">Rs. 420</span>
+                    <button class="add-btn" onclick="addCart('Cold Brew',420)">ADD +</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- OUR STORY -->
+
+<section class="experience" id="about">
+    <img src="https://images.unsplash.com/photo-1445116572660-236099ec97a0?auto=format&fit=crop&w=1000&q=85" alt="Beautiful coffee shop interior" class="reveal">
+
+    <div class="experience-content reveal">
+        <small>MORE THAN JUST COFFEE</small>
+        <h2>Made for Moments That Matter.</h2>
+        <p>
+            At CAFFIORA, we believe coffee is more than a drink.
+            It is a moment of comfort, a reason to connect and
+            a little happiness in your everyday life.
+        </p>
+        <p>
+            Every cup is crafted with passion, quality ingredients
+            and attention to detail. Because you deserve something
+            extraordinary.
+        </p>
+        <a href="#contact" class="btn">DISCOVER CAFFIORA</a>
+    </div>
+</section>
+
+<!-- SECOND OFFER -->
+
+<section class="deal">
+    <small>A LITTLE EXTRA HAPPINESS</small>
+    <h2>Buy 1 Coffee, Get 1 at 50% OFF!</h2>
+    <p>Bring your favourite person and make your coffee moments special.</p>
+    <a href="#menu" class="btn">GRAB THIS OFFER →</a>
+</section>
+
+<!-- BENEFITS -->
+
+<section>
+    <div class="section-heading reveal">
+        <small>THE CAFFIORA DIFFERENCE</small>
+        <h2>Why You'll Love Us</h2>
+    </div>
+
+    <div class="benefits">
+        <div class="benefit reveal">
+            <div class="symbol">☕</div>
+            <h3>Premium Coffee</h3>
+            <p>Carefully selected coffee and quality ingredients.</p>
+        </div>
+
+        <div class="benefit reveal">
+            <div class="symbol">♡</div>
+            <h3>Made with Love</h3>
+            <p>Every cup is prepared with passion and care.</p>
+        </div>
+
+        <div class="benefit reveal">
+            <div class="symbol">✧</div>
+            <h3>Unique Flavours</h3>
+            <p>Discover exciting flavours in every sip.</p>
+        </div>
+
+        <div class="benefit reveal">
+            <div class="symbol">♧</div>
+            <h3>Fresh Moments</h3>
+            <p>Freshly prepared coffee for your daily happiness.</p>
+        </div>
+    </div>
+</section>
+
+<!-- TESTIMONIAL -->
+
+<section class="testimonial">
+    <div class="section-heading reveal">
+        <small>LOVE IN EVERY SIP</small>
+        <h2>A Coffee Worth Remembering</h2>
+    </div>
+
+    <blockquote class="reveal">
+        "Great coffee isn't just about taste.
+        It's about the feeling that stays with you
+        long after the last sip."
+    </blockquote>
+
+    <div class="stars">★★★★★</div>
+    <p>THE CAFFIORA EXPERIENCE</p>
+</section>
+
+<!-- NEWSLETTER -->
+
+<section class="newsletter" id="contact">
+    <h2>Stay in the Coffee Loop.</h2>
+    <p>Subscribe for exclusive offers, new flavours and special surprises.</p>
+
+    <form id="newsletterForm">
+        <input type="email" placeholder="Enter your email address" required>
+        <button type="submit">SUBSCRIBE →</button>
+    </form>
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+    <div class="footer-grid">
+
+        <div class="footer-brand">
+            <h2>CAFFIORA.</h2>
+            <p>
+                A little coffee. A lot of happiness.
+                Experience the art of extraordinary coffee
+                with CAFFIORA.
+            </p>
+        </div>
+
+        <div class="footer-links">
+            <h3>QUICK LINKS</h3>
+            <a href="#home">Home</a>
+            <a href="#menu">Our Menu</a>
+            <a href="#about">Our Story</a>
+            <a href="#offers">Offers</a>
+        </div>
+
+        <div class="footer-links">
+            <h3>CONNECT WITH US</h3>
+            <a href="#contact">Contact Us</a>
+            <a href="#">Instagram</a>
+            <a href="#">Facebook</a>
+            <a href="mailto:hello@caffiora.com">Email Us</a>
+        </div>
+
+    </div>
+
+    <div class="copyright">
+        © 2026 CAFFIORA. ALL RIGHTS RESERVED. MADE WITH ♥ AND COFFEE.
+    </div>
+</footer>
+
+<div class="toast" id="toast">Added to your coffee bag!</div>
+
+<script>
+
+// MOBILE NAVIGATION
+
+function toggleMenu() {
+    document.getElementById('navigation').classList.toggle('active');
+}
+
+document.querySelectorAll('nav a').forEach(link => {
+    link.addEventListener('click', () => {
+        document.getElementById('navigation').classList.remove('active');
+    });
+});
+
+// SHOPPING CART
+
+let cart = [];
+
+function addCart(name, price) {
+    cart.push({name, price});
+
+    document.getElementById('cart-count').textContent = cart.length;
+
+    showToast(name + ' added to your bag!');
+}
+
+function showCart() {
+    if (cart.length === 0) {
+        alert('Your coffee bag is empty. Explore our menu!');
+        return;
+    }
+
+    let total = cart.reduce((sum, item) => sum + item.price, 0);
+
+    let items = cart.map(item =>
+        item.name + ' - Rs. ' + item.price
+    ).join('\n');
+
+    alert(
+        'YOUR CAFFIORA BAG\n\n' +
+        items +
+        '\n\nTotal: Rs. ' + total +
+        '\n\nThank you for choosing CAFFIORA!'
+    );
+}
+
+// NOTIFICATION
+
+function showToast(message) {
+    const toast = document.getElementById('toast');
+
+    toast.textContent = message;
+    toast.classList.add('show');
+
+    setTimeout(() => {
+        toast.classList.remove('show');
+    }, 2500);
+}
+
+// NEWSLETTER
+
+document.getElementById('newsletterForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    showToast('Thank you for joining CAFFIORA!');
+
+    this.reset();
+});
+
+// SCROLL ANIMATIONS
+
+const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
+        }
+    });
+}, {threshold: 0.15});
+
+document.querySelectorAll('.reveal').forEach(element => {
+    observer.observe(element);
+});
+
+</script>
+
+</body>
+</html>
